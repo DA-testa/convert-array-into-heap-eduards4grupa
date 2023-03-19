@@ -42,7 +42,7 @@ def main():
         filename=input()
         with open (f"tests/{filename}") as f:
             n=int(f.readline()) 
-            data = list(map(int, input().split()))
+            data = list(map(int, f.readline().split()))
         
     # checks if lenght of data is the same as the said lenght
    
