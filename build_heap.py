@@ -30,11 +30,11 @@ def main():
     # first two tests are from keyboard, third test is from a file
     iof = input()
     
-    if iof = "I":
+    if iof == "I":
     # input from keyboard
         n = int(input())
         data = list(map(int, input().split()))
-    if iof = "F":
+    if iof == "F":
         filename=input()
         with open ('./tests/'filename,"r") as f:
             read=int(f.read()) 
