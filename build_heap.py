@@ -10,7 +10,7 @@ def build_heap(data):
         minHeapify(array, size, k)
     return swaps
 
-def minHeapify(array, size, k)
+def minHeapify(array, size, k):
     n=len(data)
     set k as smallest
     leftChild = 2*k + 1
