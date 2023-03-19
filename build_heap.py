@@ -17,9 +17,9 @@ def minHeapify(array, size, k):
     rightChild = 2*k + 2
   
     if leftChild < n and array[leftChild] < array[smallest]:
-        set leftChildIndex as smallest
+        leftChildIndex = smallest
     if rightChild < n and array[rightChild]<array[smallest]:
-        set rightChildIndex as smallest
+        rightChildIndex = smallest
         
   
 
