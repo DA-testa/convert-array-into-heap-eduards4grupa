@@ -36,7 +36,7 @@ def main():
         data = list(map(int, input().split()))
     if iof == "F":
         filename=input()
-        with open ('./tests/'filename,"r") as f:
+        with open ('./tests/',filename,"r") as f:
             read=int(f.read()) 
             data = list(map(int, input().split()))
         
