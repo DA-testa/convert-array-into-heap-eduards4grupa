@@ -19,11 +19,11 @@ def minHeapify(data, i, n,swaps):
     if leftChild < n and data[leftChild] < data[maz]:
         maz = leftChild
     if rightChild < n and data[rightChild]<data[maz]:
-       maz = rightChild
-    if smallest != i:
+        maz = rightChild
+    if maz != i:
         swaps.append((i, maz))
         data[i], data[maz]=data[maz], data[i]
-        minHeapify(data, i ,n)
+        minHeapify(data, i ,n,swaps)
   
 
 def main():
@@ -62,4 +62,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+
