@@ -7,22 +7,22 @@ def build_heap(data):
     # try to achieve  O(n) and not O(n2)
     n=len(data)
     for i in range (n//2,-1,-1):
-        minHeapify(array, size, k)
+        minHeapify(data, i, n)
     return swaps
 
 def minHeapify(data, i, n):
     n=len(data)
-    samllest = i
-    leftChild = 2*k + 1
-    rightChild = 2*k + 2
+    maz = i
+    leftChild = 2*i + 1
+    rightChild = 2*i + 2
   
-    if leftChild < n and data[leftChild] < data[smallest]:
-        smallest = leftChild
-    if rightChild < n and data[rightChild]<data[smallest]:
-       smallest = rightChild
+    if leftChild < n and data[leftChild] < data[maz]:
+        maz = leftChild
+    if rightChild < n and data[rightChild]<data[maz]:
+       maz = rightChild
     if smallest != i:
         swaps.append((i, smallest))
-        data[i], data[smallest]=data[smallest], data[i]
+        data[i], data[maz]=data[maz], data[i]
         minHeapify(data, i ,n)
   
 
