@@ -40,7 +40,7 @@ def main():
         assert len(data) == n
     if "F" in iof:
         filename=input()
-        with open ('./tests/',filename,"r") as f:
+        with open (f"tests/{filename}") as f:
             n=int(f.readline()) 
             data = list(map(int, input().split()))
         
