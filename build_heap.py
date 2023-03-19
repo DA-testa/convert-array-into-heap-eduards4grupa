@@ -20,7 +20,7 @@ def minHeapify(data, i, n,swaps):
         maz = leftChild
     if rightChild < n and data[rightChild]<data[maz]:
         maz = rightChild
-    if maz != i:
+    if i != maz:
         swaps.append((i, maz))
         data[i], data[maz]=data[maz], data[i]
         minHeapify(data, i ,n,swaps)
