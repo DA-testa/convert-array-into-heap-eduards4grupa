@@ -12,7 +12,7 @@ def build_heap(data):
 
 def minHeapify(array, size, k):
     n=len(data)
-    set k as smallest
+    k = smallest
     leftChild = 2*k + 1
     rightChild = 2*k + 2
   
