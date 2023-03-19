@@ -12,7 +12,7 @@ def build_heap(data):
 
 def minHeapify(array, size, k):
     n=len(data)
-    k = smallest
+    size = smallest
     leftChild = 2*k + 1
     rightChild = 2*k + 2
   
@@ -30,18 +30,19 @@ def main():
     # first two tests are from keyboard, third test is from a file
     iof = input()
     
-    if iof == "I":
+    if "I" in iof:
     # input from keyboard
         n = int(input())
         data = list(map(int, input().split()))
-    if iof == "F":
+        assert len(data) == n
+    if "F" in iof:
         filename=input()
         with open ('./tests/',filename,"r") as f:
-            read=int(f.read()) 
+            n=int(f.readline()) 
             data = list(map(int, input().split()))
         
     # checks if lenght of data is the same as the said lenght
-    assert len(data) == n
+   
 
     # calls function to assess the data 
     # and give back all swaps
