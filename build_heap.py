@@ -10,17 +10,20 @@ def build_heap(data):
         minHeapify(array, size, k)
     return swaps
 
-def minHeapify(array, size, k):
+def minHeapify(data, i, n):
     n=len(data)
-    size = smallest
+    samllest = i
     leftChild = 2*k + 1
     rightChild = 2*k + 2
   
-    if leftChild < n and array[leftChild] < array[smallest]:
-        leftChildIndex = smallest
-    if rightChild < n and array[rightChild]<array[smallest]:
-        rightChildIndex = smallest
-        
+    if leftChild < n and data[leftChild] < data[smallest]:
+        smallest = leftChild
+    if rightChild < n and data[rightChild]<data[smallest]:
+       smallest = rightChild
+    if smallest != i:
+        swaps.append((i, smallest))
+        data[i], data[smallest]=data[smallest], data[i]
+        minHeapify(data, i ,n)
   
 
 def main():
